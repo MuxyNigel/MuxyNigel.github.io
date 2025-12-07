@@ -5,21 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nigel Mubure Portfolio</title>
   <style>
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       margin: 0;
       background: #f4f4f9;
       color: #333;
+      line-height: 1.6;
     }
+
+    /* Header Styles */
     header {
       background: #2c3e50;
       color: #fff;
       padding: 20px;
       display: flex;
       align-items: center;
-      flex-wrap: wrap; /* Allow wrapping on small screens */
+      flex-wrap: wrap;
     }
-    /* Profile Image Styling */
+
+    /* Profile Image */
     .profile-img {
       width: 80px;
       height: 80px;
@@ -28,40 +33,52 @@
       border: 2px solid #fff;
       margin-right: 20px;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5em;
     }
+
     header p {
       margin: 5px 0 0;
       font-size: 1.2em;
     }
+
+    /* Navigation */
     nav {
       margin-top: 15px;
       margin-left: auto;
     }
+
     nav a {
       color: #fff;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
-    /* Scrollable timeline container */
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    /* Marquee Container */
     .marquee-container {
       background: #34495e;
       overflow: hidden;
       white-space: nowrap;
       padding: 10px 0;
     }
-    /* Animated scrolling text */
+
+    /* Marquee Text */
     .marquee {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll-left 70s linear infinite; /* Slower speed: 40s */
+      animation: scroll-left 70s linear infinite;
       font-size: 1em;
       color: #fff;
     }
-    /* Keyframes for scrolling left */
+
     @keyframes scroll-left {
       0% {
         transform: translateX(0%);
@@ -70,31 +87,52 @@
         transform: translateX(-100%);
       }
     }
+
+    /* Section Styles */
     section {
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
       color: #2c3e50;
       border-bottom: 2px solid #ddd;
       padding-bottom: 10px;
+      margin-bottom: 20px;
     }
+
+    /* Projects Styles */
     .project {
       background: #fff;
       padding: 20px;
       margin: 20px 0;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
     .project h3 {
       margin-top: 0;
     }
-    /* Education list styles */
+
+    /* List Styles */
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* Education List */
     .education-list {
       list-style: none;
       padding-left: 0;
     }
+
     .education-list li {
       background: #fff;
       margin: 8px 0;
@@ -102,6 +140,8 @@
       border-radius: 6px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
+
+    /* Footer Styles */
     footer {
       background: #2c3e50;
       color: #fff;
@@ -109,24 +149,52 @@
       padding: 20px;
       margin-top: 40px;
     }
+
     footer a {
       color: #1abc9c;
       text-decoration: none;
       margin: 0 10px;
+      transition: color 0.3s;
     }
-    /* Make images responsive */
+
+    footer a:hover {
+      color: #16a085;
+    }
+
+    /* Images */
     img {
       max-width: 100%;
       height: auto;
       display: block;
       margin: 10px 0;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Buttons */
+    a.btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    a.btn:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- Profile Image -->
   <img src="my_prof_pic.jpeg" alt="Profile Image" class="profile-img" />
   <div>
     <h1>Nigel Mubure</h1>
@@ -181,20 +249,21 @@
     &nbsp; DSI431: Data Science and Informatics Project Management | 
     &nbsp; DSI432: Information Infrastructure 2: OOP JAVA | 
     &nbsp; DSI433: Advanced Data Warehouse and Data Mining | 
-    &nbsp; DSI434: Optimisation Techniques with NumPy & SciPy  | 
-    &nbsp; DSI435: Applied cloud computing for data-intensive sciences<br><br>
+    &nbsp; DSI434: Optimization Techniques with NumPy & SciPy  | 
+    &nbsp; DSI435: Applied Cloud Computing for Data-Intensive Sciences<br><br>
     <em>Level 4.2 (2025):</em>  
-    &nbsp; DSI436: Data analytics and visualisation using matplotlib & seaborn  | 
-    &nbsp; DSI437: Machine Learning II: Using JAVA  | 
-    &nbsp; DSI438; [Data Science and Informatics Project 2]
+    &nbsp; DSI436: Data Analytics and Visualization using Matplotlib & Seaborn  | 
+    &nbsp; DSI437: Machine Learning II: Using Java  | 
+    &nbsp; DSI438: [Data Science and Informatics Project 2]
   </div>
 </div>
 
 <!-- About Section -->
 <section id="about">
   <h2>About Me</h2>
-  <p>I am a Data Science graduate passionate about turning data into actionable insights. 
-     My expertise spans machine learning, data pipelines, and business intelligence dashboards.</p>
+  <p>
+    I am a passionate Data Science Student who enjoys applying machine learning techniques and analyzing data in various formats to uncover valuable insights. I thrive on working with diverse datasets, building models, and designing data pipelines to support data-driven decision-making. My curiosity drives me to continuously explore new technologies and methods, ensuring I can adapt and deliver innovative solutions. I am committed to leveraging data analytics, database management, and visualization to help organizations harness the full potential of their data assets.
+  </p>
 </section>
 
 <!-- Education Details -->
@@ -212,19 +281,50 @@
   </ul>
   <h3>University Undergraduate</h3>
   <ul class="education-list">
-    <!-- Removed detailed levels here as they are in the marquee -->
+    <!-- Your detailed levels are in the marquee -->
   </ul>
 </section>
 
 <!-- Projects Section -->
 <section id="projects">
   <h2>Projects</h2>
+
+  <!-- AgriAssistant -->
   <div class="project">
     <h3>AgriAssistant (Final Year Project)</h3>
-    <p>AI-powered agricultural assistant providing crop recommendations and predictive analytics.</p>
-    <p><strong>Tools:</strong> Python, Flask, Machine Learning</p>
-    <p><a href="https://nigelmubure-agriassistant.onrender.com" target="_blank">Live Demo</a></p>
+    <p>
+      AgriAssistant is an AI-powered agricultural support system designed to assist farmers in making data-driven decisions. It integrates land suitability analysis, crop yield forecasting, plant disease detection, interactive data visualization, and an intelligent chatbot to provide comprehensive support for sustainable farming.
+    </p>
+    <h4>Objectives:</h4>
+    <ul>
+      <li><strong>Land Suitability Analysis:</strong> Analyze soil and environmental data to recommend optimal crops for specific land parcels, enhancing yield and resource efficiency.</li>
+      <li><strong>Crop Yield Prediction:</strong> Forecast potential crop yields based on land and environmental conditions to aid in planning and resource management.</li>
+      <li><strong>Plant Disease Detection:</strong> Utilize CNN-based image classification techniques to identify plant diseases early, enabling timely interventions.</li>
+      <li><strong>Data Visualization:</strong> Visualize crop yield trends interactively using user-provided CSV datasets for regional and temporal analysis.</li>
+      <li><strong>Farmer Support Chatbot:</strong> Provide instant guidance and answers to agricultural queries, empowering farmers with accessible expert advice.</li>
+    </ul>
+    <h4>Skills Gained:</h4>
+    <ul>
+      <li>Data analysis & interpretation </li>
+      <li>Machine learning and deep learning (CNNs)</li>
+      <li>Environmental and soil data analysis</li>
+      <li>Natural language processing & chatbot development</li>
+      <li>Database management (SQL)</li>
+      <li>AI model deployment in real-world applications</li>
+    </ul>
+    <h4>Screenshots:</h4>
+    <ul>
+      <li><img src="path/to/screenshot1.png" alt="Land suitability analysis interface" width="300" /></li>
+      <li><img src="path/to/screenshot2.png" alt="Crop yield prediction dashboard" width="300" /></li>
+      <li><img src="path/to/screenshot3.png" alt="Plant disease detection example" width="300" /></li>
+      <li><img src="path/to/screenshot4.png" alt="Crop productivity visualization" width="300" /></li>
+    </ul>
+    <p>
+      <a href="https://nigelmubure-agriassistant.onrender.com" target="_blank" class="btn">Visit Live Demo</a>
+    </p>
   </div>
+
+  <!-- City of Mutare Billing Analytics Dashboard -->
   <div class="project">
     <h3>City of Mutare Billing Analytics Dashboard</h3>
     <p>
@@ -232,37 +332,14 @@
     </p>
     <p><strong>Motivation:</strong> The current reliance on fragmented Excel sheets for multiple suburbs leads to risks of data loss, errors, and inefficiencies. This dashboard helps streamline analysis, enhance data security, and support strategic planning.</p>
     <p><strong>Tools:</strong> R, GIS libraries (Mapview, Folium), PostgreSQL, Shiny</p>
-    <!--<p>
-      <strong>View Dashboard:</strong> <a href="#" target="_blank">Coming Soon (Deployed Link)</a>
-    </p> -->
+    <!-- Uncomment or add your deployed link when ready -->
+    <!-- <p><strong>View Dashboard:</strong> <a href="#" target="_blank">Coming Soon (Deployed Link)</a></p> -->
     <h4>Screenshots:</h4>
     <img src="Billing_Screenshot_1.jfif" alt="Billing Dashboard Screenshot 1" />
     <img src="Billing_Screenshot_2.jfif" alt="Billing Dashboard Screenshot 2" />
     <img src="Billing_Screenshot_3.jfif" alt="Billing Dashboard Screenshot 3" />
     <img src="Billing_Screenshot_4.jfif" alt="Billing Dashboard Screenshot 4" />
-    <img src="Billing_Screenshot_5..jpg" alt="Billing Dashboard Screenshot 5" />
-  </div>
-  <div class="project">
-    <h3>Pizza Sales Analysis Dashboard</h3>
-    <p>Interactive dashboard analyzing pizza sales KPIs, top products, and customer trends.</p>
-    <p><strong>Tools:</strong> Power BI</p>
-    <img src="pizza_dashboard.png" alt="Pizza Dashboard Screenshot" />
-  </div>
-  <div class="project">
-    <h3>STI Health Dashboard</h3>
-    <p>Healthcare analytics dashboard visualizing STI case distribution and treatment outcomes.</p>
-    <p><strong>Tools:</strong> Power BI</p>
-  </div>
-  <!-- New Power BI project for Fast Food Sales -->
-  <div class="project">
-    <h3>Fast Food Sales Power BI Dashboard</h3>
-    <p>
-      Showcasing skills in creating interactive dashboards, analyzing datasets, and utilizing DAX for insightful reviews of fast food sales data. This project demonstrates my ability to craft engaging visualizations, interpret key insights, and review dataset trends effectively.
-    </p>
-    <p><strong>Tools:</strong> Power BI, DAX</p>
-    <h4>Screenshots:</h4>
-    <!-- Placeholder for your dashboard image -->
-    <img src="fastfoodscreenshot.png" alt="Fast Food Sales Dashboard"/>
+    <img src="Billing_Screenshot_5.jpg" alt="Billing Dashboard Screenshot 5" />
   </div>
 </section>
 
@@ -270,10 +347,10 @@
 <section id="skills">
   <h2>Skills</h2>
   <ul>
-    <li>Programming: Python, R, SQL </li>
-    <li>BI Tools: Power BI, Tableau</li>
+    <li>Programming: Python, R, SQL</li>
+    <li>BI Tools: Microsoft Packages (Power BI, Excel...)  </li>
     <li>ML Libraries: Scikit-learn, TensorFlow</li>
-    <li>Databases: MySQL, PostgreSQL </li>
+    <li>Databases: MySQL, PostgreSQL</li>
   </ul>
 </section>
 
