@@ -77,6 +77,7 @@
       animation: scroll-left 70s linear infinite;
       font-size: 1em;
       color: #fff;
+      cursor: pointer; /* Indicates clickable */
     }
 
     @keyframes scroll-left {
@@ -209,9 +210,9 @@
   </nav>
 </header>
 
-<!-- Timeline with detailed modules organized by level -->
+<!-- Marquee with toggle -->
 <div class="marquee-container">
-  <div class="marquee">
+  <div id="myMarquee" class="marquee">
     <strong>Modules Organized by Level:</strong><br>
     <em>Level 1.1 (2022-2023):</em>  
     &nbsp; CS131: Basic Communication Skills |  
@@ -257,6 +258,19 @@
     &nbsp; DSI438: [Data Science and Informatics Project 2]
   </div>
 </div>
+
+<!-- JavaScript for toggle functionality -->
+<script>
+  const marquee = document.getElementById('myMarquee');
+
+  marquee.addEventListener('click', () => {
+    if (marquee.style.animationPlayState === 'paused') {
+      marquee.style.animationPlayState = 'running';
+    } else {
+      marquee.style.animationPlayState = 'paused';
+    }
+  });
+</script>
 
 <!-- About Section -->
 <section id="about">
@@ -319,7 +333,6 @@
       <li><img src="agriassistant_5.jfif" alt="Plant disease detection example" /></li>
       <li><img src="agriassistant_4.jfif" alt="Crop productivity visualization" /></li>
       <li><img src="agriassistant_3.png" alt="Land suitability analysis interface" /></li>
-    
     </ul>
     <p>
       <a href="https://nigelmubure-agriassistant.onrender.com" target="_blank" class="btn">Visit Live Demo</a>
@@ -402,6 +415,19 @@
 <footer>
   <p>&copy; 2025 Nigel Mubure | Built with GitHub Pages</p>
 </footer>
+
+<!-- JavaScript for marquee toggle -->
+<script>
+  const marquee = document.getElementById('myMarquee');
+
+  marquee.addEventListener('click', () => {
+    if (marquee.style.animationPlayState === 'paused') {
+      marquee.style.animationPlayState = 'running';
+    } else {
+      marquee.style.animationPlayState = 'paused';
+    }
+  });
+</script>
 
 </body>
 </html>
