@@ -67,12 +67,13 @@
       color: #1abc9c;
     }
 
-    /* Marquee Container */
+    /* Marquee Container - start below header with margin-top */
     .marquee-container {
       background: #34495e;
       overflow: hidden;
       white-space: nowrap;
       padding: 10px 0;
+      margin-top: 120px; /* Ensures marquee starts below header */
     }
 
     /* Marquee Text */
@@ -94,12 +95,14 @@
       }
     }
 
-    /* Section Styles with border top */
+    /* Sections with box borders on all sides as a "box" */
     section {
       padding: 40px 20px;
       max-width: 900px;
-      margin: auto;
-      border-top: 4px solid #3498db; /* Blue border line */
+      margin: 20px auto;
+      border: 4px solid #3498db; /* Blue border box around section */
+      border-radius: 8px;
+      background-color: #fff; /* Optional: white background inside box */
     }
 
     /* Style for section titles with background color */
@@ -307,7 +310,6 @@
     <li>Bachelor of Commerce Honours Degree in Data Science and Informatics (BS08)</li>
     <li>Midlands State University, Gweru, Zimbabwe</li>
     <li>Degree Class: 2.1 (Upper Second Class)</li>
-    <!-- Your detailed levels are in the marquee -->
   </ul>
 </section>
 
@@ -359,8 +361,6 @@
     </p>
     <p><strong>Motivation:</strong> The current reliance on fragmented Excel sheets for multiple suburbs leads to risks of data loss, errors, and inefficiencies. This dashboard helps streamline analysis, enhance data security, and support strategic planning.</p>
     <p><strong>Tools:</strong> R, GIS libraries (Mapview, Folium), PostgreSQL, Shiny</p>
-    <!-- Uncomment or add your deployed link when ready -->
-    <!-- <p><strong>View Dashboard:</strong> <a href="#" target="_blank">Coming Soon (Deployed Link)</a></p> -->
     <h4>Screenshots:</h4>
     <img src="Billing_Screenshot_1.jfif" alt="Billing Dashboard Screenshot 1" />
     <img src="Billing_Screenshot_2.jfif" alt="Billing Dashboard Screenshot 2" />
@@ -399,7 +399,6 @@
     </p>
     <p><strong>Tools:</strong> Power BI, DAX</p>
     <h4>Screenshots:</h4>
-    <!-- Placeholder for your dashboard image -->
     <img src="fastfoodscreenshot.png" alt="Fast Food Sales Dashboard"/>
   </div>
 </section>
