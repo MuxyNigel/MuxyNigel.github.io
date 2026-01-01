@@ -12,16 +12,21 @@
       background: #f4f4f9;
       color: #333;
       line-height: 1.6;
+      padding-top: 180px; /* Space for fixed header */
     }
 
     /* Header Styles */
     header {
+      position: fixed;
+      top: 0;
+      width: 100%;
       background: #2c3e50;
       color: #fff;
       padding: 20px;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      z-index: 999;
     }
 
     /* Profile Image */
@@ -89,17 +94,21 @@
       }
     }
 
-    /* Section Styles */
+    /* Section Styles with border top */
     section {
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+      border-top: 4px solid #3498db; /* Blue border line */
     }
 
+    /* Style for section titles with background color */
     h2 {
       color: #2c3e50;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
+      background-color: #e0f7fa; /* Light cyan background under title */
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 4px;
       margin-bottom: 20px;
     }
 
