@@ -39,6 +39,10 @@
       margin-right: 20px;
     }
 
+    header div {
+      flex: 1;
+    }
+
     header h1 {
       margin: 0;
       font-size: 2.5em;
@@ -70,6 +74,47 @@
 
     nav a:hover {
       color: #1abc9c;
+    }
+
+    /* Hamburger menu button - hidden on large screens */
+    #menu-toggle {
+      display: none;
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 1001;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #menu-toggle span {
+      display: block;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    /* Responsive styles for small screens */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: #2c3e50;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      nav.show {
+        display: flex;
+      }
+      #menu-toggle {
+        display: flex;
+      }
     }
 
     /* Marquee Container - start below header with margin-top */
@@ -212,6 +257,13 @@
 </head>
 <body>
 
+<!-- Hamburger menu toggle button -->
+<div id="menu-toggle" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
 <header>
   <img src="my_prof_pic.jpeg" alt="Profile Image" class="profile-img" />
   <div>
@@ -219,7 +271,7 @@
     <p>Data Science & Informatics | Machine Learning | BI Dashboards</p>
   </div>
   <!-- Navigation fixed at top right -->
-  <nav>
+  <nav id="nav-menu">
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
@@ -286,6 +338,25 @@
       marquee.style.animationPlayState = 'running';
     } else {
       marquee.style.animationPlayState = 'paused';
+    }
+  });
+
+  // Toggle menu for small screens
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    // Change aria-expanded attribute
+    const expanded = navMenu.classList.contains('show');
+    menuToggle.setAttribute('aria-expanded', expanded);
+  });
+
+  // Allow pressing Enter or Space to toggle menu for accessibility
+  document.getElementById('menu-toggle').addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      document.getElementById('menu-toggle').click();
     }
   });
 </script>
@@ -448,7 +519,7 @@
   <p>&copy; 2025 Nigel Mubure | Built with GitHub Pages</p>
 </footer>
 
-<!-- JavaScript for marquee toggle -->
+<!-- JavaScript for marquee toggle and menu toggle -->
 <script>
   const marquee = document.getElementById('myMarquee');
 
@@ -457,6 +528,25 @@
       marquee.style.animationPlayState = 'running';
     } else {
       marquee.style.animationPlayState = 'paused';
+    }
+  });
+
+  // Toggle menu for small screens
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    // Change aria-expanded attribute
+    const expanded = navMenu.classList.contains('show');
+    menuToggle.setAttribute('aria-expanded', expanded);
+  });
+
+  // Allow pressing Enter or Space to toggle menu for accessibility
+  document.getElementById('menu-toggle').addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      document.getElementById('menu-toggle').click();
     }
   });
 </script>
