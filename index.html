@@ -9,7 +9,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #f4f4f9;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
       color: #333;
       line-height: 1.6;
       padding-top: 180px;
@@ -36,7 +36,8 @@
     .profile-section {
       display: flex;
       align-items: center;
-      flex: 1;
+      justify-content: space-between;
+      width: 100%;
     }
 
     /* Profile Image */
@@ -416,9 +417,6 @@
 </head>
 <body>
 
-<!-- Menu Toggle Button -->
-<button id="menu-toggle" aria-label="Menu">☰</button>
-
 <!-- Dropdown Menu -->
 <div class="dropdown-menu" id="dropdown-menu">
   <a href="#about">About</a>
@@ -429,11 +427,14 @@
 </div>
 
 <header>
-  <img src="my_prof_pic.jpeg" alt="Profile Image" class="profile-img" />
-<div>
-  <h1>Nigel Mubure</h1>
-  <p>Data Science | Data Analytics | Systems Design | BI Dashboards | Machine Learning</p>
-</div>
+  <div class="profile-section">
+    <img src="my_prof_pic.jpeg" alt="Profile Image" class="profile-img" />
+    <div>
+      <h1>Nigel Mubure</h1>
+      <p>Data Science | Data Analytics | Systems Design | BI Dashboards | Machine Learning</p>
+    </div>
+    <button id="menu-toggle" aria-label="Menu">☰</button>
+  </div>
 </header>
 
 <!-- Marquee with toggle -->
@@ -496,7 +497,7 @@
       marquee.style.animationPlayState = 'paused';
     }
   });
-dropdown menu
+  // Dropdown menu
   const menuToggle = document.getElementById('menu-toggle');
   const dropdownMenu = document.getElementById('dropdown-menu');
 
@@ -507,8 +508,7 @@ dropdown menu
   // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
     if (!menuToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-      dropdownMenu.classList.remove('show
-      body.classList.add('sidebar-open');
+      dropdownMenu.classList.remove('show');
     }
   });
 
