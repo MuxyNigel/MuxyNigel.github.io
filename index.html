@@ -9,7 +9,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: #f4f4f9;
       color: #333;
       line-height: 1.6;
       padding-top: 180px;
@@ -26,9 +26,17 @@
       padding: 20px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       z-index: 999;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      flex: 1;
     }
 
     /* Profile Image */
@@ -40,10 +48,6 @@
       border: 3px solid #1abc9c;
       margin-right: 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    header div {
-      flex: 1;
     }
 
     header h1 {
@@ -63,9 +67,6 @@
 
     /* Menu Toggle Button */
     #menu-toggle {
-      position: absolute;
-      top: 30px;
-      right: 30px;
       background: rgba(26, 188, 156, 0.9);
       color: #fff;
       border: none;
@@ -75,7 +76,6 @@
       font-size: 18px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
-      z-index: 1001;
     }
 
     #menu-toggle:hover {
@@ -87,7 +87,7 @@
     .dropdown-menu {
       position: fixed;
       top: 100px;
-      right: 30px;
+      right: 20px;
       background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
       border-radius: 8px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.3);
@@ -116,15 +116,57 @@
       transform: translateX(-5px);
     }
 
-    /* Shift content when sidebar is open */
-    .sidebar-open body {
-      margin-left: 250px;
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-section {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .profile-img {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1.1em;
+      }
+
+      #menu-toggle {
+        position: static;
+        margin-top: 10px;
+      }
+
+      .dropdown-menu {
+        right: 15px;
+        top: 120px;
+        min-width: 180px;
+      }
+
+      body {
+        padding-top: 150px;
+      }
+    }#3498db;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
 
-    .sidebar-open header {
-      left: 250px;
-      width: calc(100% - 250px);
-    }
+    section:hover {
+      transform: translateY(-5px
     .marquee-container {
       background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
       overflow: hidden;
@@ -154,18 +196,18 @@
     }
 
     /* Sections */
-    section {
-      padding: 50px 30px;
-      max-width: 1000px;
-      margin: 30px auto;
-      border: 2px solid rgba(52, 152, 219, 0.3);
-      border-radius: 15px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    section {#f8f9fa;
+      padding: 25px;
+      margin: 25px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      border-left: 3px solid #1abc9c;
     }
 
+    .project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8
     section:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 40px rgba(0,0,0,0.15);
@@ -184,12 +226,12 @@
       margin-bottom: 30px;
       font-size: 2em;
       text-align: center;
-      width: 100%;
+      width: 100%;1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
 
-    h3 {
-      color: #34495e;
-      border-bottom: 2px solid #1abc9c;
+    ul li:hover {
+      transform: translateX(3d #1abc9c;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
@@ -199,16 +241,16 @@
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       padding: 25px;
       margin: 25px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      border-left: 5px solid #1abc9c;
+      border-radiu#f8f9fa;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
 
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    }
+    .education-list li:hover {
+      transform: translateX(3
 
     .project h3 {
       margin-top: 0;
@@ -317,25 +359,22 @@
       color: #fff;
       border: none;
       padding: 15px 30px;
-      border-radius: 25px;
-      font-size: 1.1em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 20px 0;
+      border-radiu#f8f9fa;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
 
-    #transcript-btn:hover {
+    #skills ul li:hover {
+      transform: translateX(3
       background: linear-gradient(45deg, #c0392b, #e74c3c);
       transform: translateY(-3px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
-    #transcript-section {
-      display: none;
-      margin-top: 30px;
-      padding: 20px;
+    # padding: 20px;
       background: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -345,11 +384,14 @@
       display: block;
     }
 
-    .transcript-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+   div class="profile-section">
+    <img src="my_prof_pic.jpeg" alt="Profile Image" class="profile-img" />
+    <div>
+      <h1>Nigel Mubure</h1>
+      <p>Data Science | Data Analytics | Systems Design | BI Dashboards | Machine Learning</p>
+    </div>
+  </div>
+  <button id="menu-toggle" aria-label="Menu">☰</button justify-content: center;
     }
 
     .transcript-images img {
