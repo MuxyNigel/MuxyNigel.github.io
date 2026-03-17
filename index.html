@@ -664,8 +664,12 @@ Beyond analysis, I have hands-on experience designing and implementing informati
     <li>Midlands State University, Gweru, Zimbabwe</li>
     <li>Degree Class: 2.1 (Upper Second Class)</li>
   </ul>
+  
+  <!-- Button to toggle transcript section -->
   <button id="transcript-btn">View Academic Transcripts</button>
-  <div id="transcript-section">
+  
+  <!-- Transcript section initially hidden -->
+  <div id="transcript-section" style="display: none;">
     <h3>Academic Transcripts</h3>
     <p>Here are my academic transcripts showcasing my educational achievements:</p>
     <div class="transcript-images">
@@ -673,8 +677,7 @@ Beyond analysis, I have hands-on experience designing and implementing informati
       <img src="transcript1.jpeg" alt="Transcript 1" />
       <img src="transcript2.jpeg" alt="Transcript 2" />
       <img src="transcript3.jpeg" alt="Transcript 3" />
-      <img src="transcript4.jpeg" alt="Transcript 3" />
-      <!-- Add more images as needed -->
+      <img src="transcript4.jpeg" alt="Transcript 4" />
     </div>
     <!-- PDF Viewer -->
     <div class="transcript-pdf">
@@ -684,6 +687,18 @@ Beyond analysis, I have hands-on experience designing and implementing informati
   </div>
 </section>
 
+<!-- Add the script at the end of your HTML or inside a <script> tag -->
+<script>
+  document.getElementById('transcript-btn').addEventListener('click', function() {
+    const transcriptSection = document.getElementById('transcript-section');
+    if (transcriptSection.style.display === 'none' || !transcriptSection.style.display) {
+      transcriptSection.style.display = 'block'; // Show the section
+    } else {
+      transcriptSection.style.display = 'none'; // Hide the section
+    }
+  });
+</script>
+  
 <!-- Projects Section -->
 <section id="projects">
   <h2>Projects</h2>
