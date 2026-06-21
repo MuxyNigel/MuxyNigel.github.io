@@ -317,6 +317,17 @@
     .marquee-content:hover { animation-play-state: paused; }
     @keyframes scroll { 0% { transform: translateY(0); } 100% { transform: translateY(-100%); } }
 
+    /* GAPS & IMPROVEMENTS TABLE */
+    .gaps-section { margin-top: 20px; padding-top: 20px; border-top: 2px solid #eee; }
+    .gaps-section h4 { color: var(--secondary-color); font-size: 1.1em; margin-bottom: 15px; font-weight: 600; }
+    .gaps-table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+    .gaps-table th { background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%); color: white; padding: 12px; text-align: left; font-weight: 600; border: none; }
+    .gaps-table td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+    .gaps-table tr:nth-child(even) { background: #f9f9f9; }
+    .gaps-table tr:hover { background: #f0f0f0; }
+    .gaps-table td:first-child { color: var(--secondary-color); font-weight: 500; width: 40%; }
+    .gaps-table td:last-child { color: #e74c3c; font-size: 0.9em; line-height: 1.5; }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       body { padding-top: 70px; }
@@ -517,6 +528,85 @@
           <img src="assets/images/projects/dashboards/pizza_dashboard.png" alt="Dashboard" onclick="expandImage(this)" />
           <img src="assets/images/projects/dashboards/sti_analysis.png" alt="Dashboard" onclick="expandImage(this)" />
           <img src="assets/images/projects/dashboards/fastfoodscreenshot.png" alt="Dashboard" onclick="expandImage(this)" />
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header"><h3>Rukwai - Beauty & Lifestyle Platform</h3></div>
+      <div class="project-body">
+        <p>Full-stack Android application and platform connecting clients to beauty service providers for instant bookings, payments, and product sales.</p>
+        <ul>
+          <li>Mobile-first Android application</li>
+          <li>Real-time booking & payment system</li>
+          <li>Provider management dashboard</li>
+          <li>Integrated marketplace for beauty products</li>
+          <li>Social sharing with web preview feature</li>
+          <li>Rating & review system</li>
+          <li>Collaborative development with team</li>
+        </ul>
+
+        <div class="gaps-section">
+          <h4>📋 Identified Gaps & Impacts</h4>
+          <table class="gaps-table">
+            <thead>
+              <tr>
+                <th>Gap</th>
+                <th>Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No shareable public web link for services/stylists</td>
+                <td>Zero organic social growth — no WhatsApp sharing</td>
+              </tr>
+              <tr>
+                <td>No marketplace for physical products</td>
+                <td>Cannot sell haircare, skincare, tools, gifts</td>
+              </tr>
+              <tr>
+                <td>No gifting or gift card feature</td>
+                <td>Missing major purchase occasions</td>
+              </tr>
+              <tr>
+                <td>No service categories or tags</td>
+                <td>Clients cannot filter by Hair, Nails, Lashes etc.</td>
+              </tr>
+              <tr>
+                <td>No stylist portfolio or photo gallery</td>
+                <td>Cannot see stylist's actual work before booking</td>
+              </tr>
+              <tr>
+                <td>No availability schedule</td>
+                <td>Booking conflicts, user friction</td>
+              </tr>
+              <tr>
+                <td>No saved/favourite stylists</td>
+                <td>No way to save preferred providers</td>
+              </tr>
+              <tr>
+                <td>No loyalty or referral programme</td>
+                <td>No incentive to return or invite friends</td>
+              </tr>
+              <tr>
+                <td>No "near me" map discovery</td>
+                <td>Location discovery not surfaced</td>
+              </tr>
+              <tr>
+                <td>No before-and-after result sharing</td>
+                <td>No viral content loop</td>
+              </tr>
+              <tr>
+                <td>No deep linking</td>
+                <td>Shared links can't open directly inside the app</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="project-footer">
+          <a href="https://rukwai.co.zw" target="_blank" class="btn">Visit Website</a>
+          <a href="https://play.google.com/store/apps/details?id=com.rukwai" target="_blank" class="btn">Download on Play Store</a>
         </div>
       </div>
     </div>
