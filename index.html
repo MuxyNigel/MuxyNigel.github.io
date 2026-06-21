@@ -225,6 +225,26 @@
     .education-item h3 { color: var(--accent-color); margin-bottom: 10px; }
     .education-item p { margin: 8px 0; color: #666; }
 
+    #experience { background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-lighter) 100%); }
+    .experience-item {
+      background: white;
+      padding: 30px;
+      margin: 25px 0;
+      border-radius: 12px;
+      border-left: 5px solid var(--primary-color);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .experience-item:hover { transform: translateX(10px); box-shadow: var(--shadow-lg); }
+    .experience-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; flex-wrap: wrap; }
+    .experience-header h3 { color: var(--secondary-color); margin: 0; flex: 1; min-width: 200px; }
+    .experience-header .dates { color: var(--primary-color); font-weight: 600; margin-top: 5px; }
+    .experience-company { color: var(--accent-color); font-weight: 600; font-size: 0.95em; margin-bottom: 5px; }
+    .experience-department { color: #666; font-size: 0.9em; margin-bottom: 15px; font-style: italic; }
+    .experience-item ul { list-style: none; padding: 0; margin: 15px 0; }
+    .experience-item li { padding: 8px 0 8px 20px; position: relative; color: #666; font-size: 0.95em; line-height: 1.6; }
+    .experience-item li:before { content: "▸"; position: absolute; left: 0; color: var(--primary-color); font-weight: bold; }
+
     .toggle-btn {
       background: var(--accent-danger);
       color: white;
@@ -396,6 +416,7 @@
   <button id="menu-toggle" aria-label="Toggle menu">☰</button>
   <nav id="nav-menu">
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
@@ -418,6 +439,31 @@
 <section id="about" class="container">
   <h2>About</h2>
   <p>I am a passionate Data Science graduate with strong interests in applying data analytics, system design, and machine learning to solve real-world problems. I enjoy working with diverse datasets, building analytical models, and developing data-driven systems that support informed decision-making.</p>
+</section>
+
+<section id="experience" class="container">
+  <h2>Experience</h2>
+  
+  <div class="experience-item">
+    <div class="experience-company">GIS Data Analyst - Internship</div>
+    <div class="experience-header">
+      <h3>City of Mutare</h3>
+      <div class="dates">Apr 2024 - Dec 2024</div>
+    </div>
+    
+    <p style="margin-bottom: 15px; color: #555; line-height: 1.8;">During my year-long industrial attachment (2024) at the City of Mutare's GIS Department, I applied data science to municipal challenges, transforming operational workflows and enhancing data-driven decision-making across the organization.</p>
+    
+    <h4 style="color: var(--secondary-color); margin-top: 20px; margin-bottom: 10px; font-size: 1em;">Key Responsibilities & Achievements:</h4>
+    <ul>
+      <li><strong>Field Data Collection & Analysis:</strong> Conducted house-to-house data collection using EpiCollect5 and mWater to improve service delivery and support NRW (Non-Revenue Water) reduction initiatives</li>
+      <li><strong>Data Wrangling & Processing:</strong> Performed comprehensive data cleaning, merging, transformation, and validation to ensure accuracy and consistency of spatial and non-spatial datasets</li>
+      <li><strong>Automation & Python Development:</strong> Enhanced workflows and reporting accuracy through Python-based automation, reducing manual processing time and improving data reliability</li>
+      <li><strong>Advanced Billing Analysis:</strong> Performed sophisticated billing analysis using Excel (XLOOKUP, VLOOKUP, Pivot Tables), identifying trends and patterns in billing data</li>
+      <li><strong>GIS & Spatial Visualization:</strong> Created heatmaps and spatial visualizations using GIS tools to support resource allocation and planning decisions</li>
+      <li><strong>Dashboard Development:</strong> Developed a PostgreSQL-backed billing dashboard to automate routine reports, enabling real-time insights and reducing reporting overhead</li>
+      <li><strong>Cross-Departmental Collaboration:</strong> Worked closely with billing and engineering teams to obtain necessary data and insights, fostering data-driven decision-making</li>
+    </ul>
+  </div>
 </section>
 
 <section id="education" class="container">
